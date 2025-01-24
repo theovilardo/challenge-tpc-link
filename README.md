@@ -61,7 +61,7 @@ La aplicación tiene las siguientes funcionalidades principales:
   Inicio de sesión del usuario con su **DNI**.  
 
 - **GET /prestamo**:  
-  Consulta del importe del préstamo disponible para el usuario autenticado.  
+  Consulta del importe del préstamo disponible para el usuario con DNI válido.  
 
 - **POST /archivo/importar**:  
   Carga de archivo con datos de relación **DNI - Importe**.  

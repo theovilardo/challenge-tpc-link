@@ -7,6 +7,8 @@ import com.redlinktest.challenge.domain.repository.InformeRepo;
 import com.redlinktest.challenge.dto.utils.Reporte;
 import jakarta.validation.constraints.NotNull;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -32,25 +34,10 @@ public class ImporteUseCase {
         }
     }
 
-//    public Map<String, Object> disponibilidadDeImporte(String dni) {
-//        Optional<Empleado> empleadoOpt = empleadosRepo.findByDni(dni);
-//
-//        //separo los casos
-//        if (empleadoOpt.isPresent()) {
-//            // si el dni del empleado está registrado
-//            return actualizarInforme(empleadoOpt.get());
-//        } else {
-//            // si el dni no esta registrado (es invalido)
-//            return respuestaDniInvalido();
-//        }
-//    }
-
-    // se puede hacerlo funcional pero me parece mejor que sea mas declarativo
-//    public Map<String, Object> disponibilidadDeImporte(String dni) {
-//        Optional<Empleado> empleadoOpt = empleadosRepo.findByDni(dni);
-//
-//        return empleadoOpt.map(this::actualizarInforme).orElseGet(this::createInvalidDniResponse);
-//    }
+    // genera el informe diario de consultas realizadas (para el caso con dni válido e importe disponible)
+    public List<ImporteInforme> generarInformeDiario() {
+        return informeRepo.findAll();
+    }
 
     private Reporte actualizarInforme(Empleado empleado) {
         // Si el empleado tiene DNI válido y tiene importe asociado, queda asentado en el informe
@@ -63,41 +50,11 @@ public class ImporteUseCase {
         }
     }
 
-//    private Map<String, Object> actualizarInforme(Empleado empleado) {
-//        // si el empleado tiene dni válido y tiene importe asociado queda asentado en el informe
-//        if (tieneImporteValido(empleado)) {
-//            informeRepo.save(new ImporteInforme(empleado.getDni())); // guardo el dni dle empleado en el informe
-//            return Map.of(
-//                    "validez", true,
-//                    "importe", empleado.getImporte(),
-//                    "mensaje", "Préstamo disponible"
-//            );
-//        } else {
-//            // si el dni es válido y no tiene importe asociado (BigDecimal.ZERO)
-//            return Map.of(
-//                    "validez", true,
-//                    "mensaje", "Préstamo no disponible"
-//            );
-//        }
-//    }
-
     private boolean tieneImporteValido(@NotNull Empleado empleado) {
         return empleado.getImporte() != null && empleado.getImporte().doubleValue() > 0;
     }
 
-//    private boolean tieneImporteValido(@NotNull Empleado empleado) {
-//        return empleado.getImporte() != null &&
-//                empleado.getImporte().doubleValue() > 0;
-//    }
-
     private Reporte respuestaDniInvalido() {
         return new Reporte(false, null, "DNI Inválido");
     }
-
-//    private Map<String, Object> respuestaDniInvalido() {
-//        return Map.of(
-//                "validez", false,
-//                "mensaje", "DNI Invalido"
-//        );
-//    }
 }

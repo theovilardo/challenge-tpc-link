@@ -66,7 +66,7 @@ La aplicación tiene las siguientes funcionalidades principales:
 - **POST /archivo/importar**:  
   Carga de archivo con datos de relación **DNI - Importe**.  
 
-- **GET /reporte/generar**:  
+- **GET /informe/generar**:  
   Generación del reporte diario.
 
 ## **Estrategia para la Gestión de Archivos**

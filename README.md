@@ -57,17 +57,11 @@ La aplicación tiene las siguientes funcionalidades principales:
 
 ## **Endpoints Principales de la API**
 
-- **POST /login**:  
-  Inicio de sesión del usuario con su **DNI**.  
+- **GET /prestamos/{dni}**  
+  Consulta del importe del préstamo disponible para un empleado, proporcionando su **DNI** como parámetro en la URL.  
 
-- **GET /prestamo**:  
-  Consulta del importe del préstamo disponible para el usuario con DNI válido.  
-
-- **POST /archivo/importar**:  
-  Carga de archivo con datos de relación **DNI - Importe**.  
-
-- **GET /informe/generar**:  
-  Generación del reporte diario.
+- **POST /prestamos/{informe}**  
+  Guarda una entrada en el informe diario relacionado con un préstamo consultado. 
 
 ## **Estrategia para la Gestión de Archivos**
 

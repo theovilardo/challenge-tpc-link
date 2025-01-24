@@ -15,9 +15,10 @@ public class DataInicial {
     CommandLineRunner initDatabase(EmpleadosRepo empleadosRepo) {
         return args -> {
             empleadosRepo.saveAll(List.of(
-                    new Empleado("42356578", new BigDecimal("15000.50")),   // Caso: DNI válido con importe
-                    new Empleado("22354321", BigDecimal.ZERO),                  // Caso: DNI válido sin importe
-                    new Empleado("55098342", null)                      // Caso: DNI válido, pero sin datos de importe
+                    new Empleado("42356578", new BigDecimal("15000.50")),   // Caso DNI válido con importe
+                    new Empleado("32446698", new BigDecimal("150000.50")),  // Extra para le informe
+                    new Empleado("22354321", BigDecimal.ZERO),                  // Caso DNI válido sin importe
+                    new Empleado("55098342", null)                      // Caso DNI válido, pero sin datos de importe
                     // el invalido se testea manualmente
             ));
         };

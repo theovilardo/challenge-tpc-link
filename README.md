@@ -61,7 +61,7 @@ La aplicación tiene las siguientes funcionalidades principales:
   Consulta del importe del préstamo disponible para un empleado, proporcionando su **DNI** como parámetro en la URL.  
 
 - **POST /prestamos/informe**  
-  Guarda una entrada en el informe diario relacionado con un préstamo consultado. 
+  Pide el informe diario con los DNIs de los empleados con prestamo disponible que hayan consultado hasta la fecha. 
 
 ## **Estrategia para la Gestión de Archivos**
 

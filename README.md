@@ -55,7 +55,7 @@ La aplicación tiene las siguientes funcionalidades principales:
      mvn test
      ```
 
-## **Endpoints Principales**
+## **Endpoints Principales de la API**
 
 - **POST /login**:  
   Inicio de sesión del usuario con su **DNI**.  

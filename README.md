@@ -60,7 +60,7 @@ La aplicación tiene las siguientes funcionalidades principales:
 - **GET /prestamos/{dni}**  
   Consulta del importe del préstamo disponible para un empleado, proporcionando su **DNI** como parámetro en la URL.  
 
-- **POST /prestamos/{informe}**  
+- **POST /prestamos/informe**  
   Guarda una entrada en el informe diario relacionado con un préstamo consultado. 
 
 ## **Estrategia para la Gestión de Archivos**

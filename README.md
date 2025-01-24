@@ -24,7 +24,7 @@ La aplicación tiene las siguientes funcionalidades principales:
 - **Framework**: SpringBoot 
 - **Base de Datos**: H2 (en memoria para facilidad de pruebas)  
 - **Testing**: JUnit, SpringBootTest
-- **Herramientas de Desarrollo**: Maven, Intellij IDEA
+- **Herramientas de Desarrollo**: Intellij IDEA
 
 ## **Cómo Levantar el Proyecto**
 

@@ -1,0 +1,1 @@
+deberia emitirse el informe en algun formato de archivo legible

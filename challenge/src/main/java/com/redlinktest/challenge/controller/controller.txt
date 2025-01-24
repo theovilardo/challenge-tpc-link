@@ -1,0 +1,1 @@
+Deberia existir algún mecanismo de control para los datos recibidos diariamente desde el banco

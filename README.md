@@ -10,27 +10,26 @@ La aplicación tiene las siguientes funcionalidades principales:
    El usuario ingresa su **DNI** para acceder a la aplicación.
 
 2. **Consulta de Préstamos Disponibles**:  
-   - Si el DNI no pertenece a un empleado elegible: se notifica que no tiene acceso.  
-   - Si el DNI pertenece a un empleado sin préstamo disponible: se informa que no tiene préstamos.  
+   - Si el DNI no pertenece a un empleado elegible: se notifica que el dni es invalido y por lo tanto no tiene acceso.  
+   - Si el DNI pertenece a un empleado sin préstamo disponible: se informa que no tiene préstamos disponibles al no tener un importe asociado.  
    - Si el DNI pertenece a un empleado con préstamo disponible: se muestra el importe disponible.
 
-3. **Carga y Procesamiento de Archivos**:  
-   - **Importación de Datos**: Se procesan diariamente archivos enviados por el banco con la relación **DNI - Importe**.  
-   - **Generación de Reportes**: Se crea un reporte diario de los usuarios que visualizaron los préstamos.
+3. **Proceso y Registro de datos**:  
+   - **Data Source**: Se procesan diariamente archivos enviados por el banco con la relación **DNI - Importe**.  
+   - **Registro de Informes**: Se crea un reporte diario de los usuarios que visualizaron los préstamos y se eleva al banco.
 
 ## **Tecnologías Utilizadas**
 
-- **Lenguaje**: Java 17  
-- **Framework**: Spring Boot  
+- **Lenguaje**: Java 21  
+- **Framework**: SpringBoot 
 - **Base de Datos**: H2 (en memoria para facilidad de pruebas)  
-- **Testing**: JUnit, Mockito  
-- **Herramientas de Desarrollo**: Maven, Postman  
-- **Gestión de Dependencias**: Spring Boot Starter
+- **Testing**: JUnit, SpringBootTest
+- **Herramientas de Desarrollo**: Maven, Intellij IDEA
 
 ## **Cómo Levantar el Proyecto**
 
 1. **Requisitos Previos**:
-   - Java 17+
+   - Java 21+
    - Maven 3.8+
    - (Opcional) Docker para despliegue en contenedor
 
@@ -48,7 +47,7 @@ La aplicación tiene las siguientes funcionalidades principales:
      ```bash
      mvn spring-boot:run
      ```
-   - La aplicación estará disponible en: `http://localhost:8080`
+   - Establecer localhost
 
 3. **Pruebas**:
    - Ejecutar los tests:
@@ -76,12 +75,12 @@ La aplicación tiene las siguientes funcionalidades principales:
    Los archivos enviados por el banco se procesan y almacenan en la base de datos.  
 
 2. **Generación de Reportes**:  
-   Se genera un reporte en formato `.csv` con los datos de los usuarios que visualizaron los préstamos.
+   Se podria generar un reporte en formato `.csv` con los datos de los usuarios que visualizaron los préstamos.
 
 ## **Autor**
 
-Desarrollado por: [Tu Nombre]  
-Correo: [tu-email@example.com]  
+Desarrollado por: [Theo Vilardo]  
+Correo: [theo.vilardo@flexia.com.ar]  
 
 ---
 

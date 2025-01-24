@@ -1,11 +1,11 @@
 package com.redlinktest.challenge;
 
 import com.redlinktest.challenge.domain.model.Empleado;
-import com.redlinktest.challenge.dto.utils.Reporte;
+import com.redlinktest.challenge.controller.utils.Reporte;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.math.BigDecimal;
-import java.util.Map;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class DniValidoSinImporteTest extends TestIntegration {

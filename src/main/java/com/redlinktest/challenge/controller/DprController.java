@@ -1,8 +1,8 @@
-package com.redlinktest.challenge.dto;
+package com.redlinktest.challenge.controller;
 
 import com.redlinktest.challenge.application.ImporteUseCase;
 import com.redlinktest.challenge.domain.model.ImporteInforme;
-import com.redlinktest.challenge.dto.utils.Reporte;
+import com.redlinktest.challenge.controller.utils.Reporte;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

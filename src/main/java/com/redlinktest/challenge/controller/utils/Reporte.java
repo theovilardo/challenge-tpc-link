@@ -1,4 +1,4 @@
-package com.redlinktest.challenge.dto.utils;
+package com.redlinktest.challenge.controller.utils;
 
 import java.math.BigDecimal;
 

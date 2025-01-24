@@ -1,4 +1,4 @@
-package com.redlinktest.challenge.dto.utils;
+package com.redlinktest.challenge.domain;
 
 import com.redlinktest.challenge.domain.model.Empleado;
 import com.redlinktest.challenge.domain.repository.EmpleadosRepo;

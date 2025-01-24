@@ -4,12 +4,11 @@ import com.redlinktest.challenge.domain.model.Empleado;
 import com.redlinktest.challenge.domain.model.ImporteInforme;
 import com.redlinktest.challenge.domain.repository.EmpleadosRepo;
 import com.redlinktest.challenge.domain.repository.InformeRepo;
-import com.redlinktest.challenge.dto.utils.Reporte;
+import com.redlinktest.challenge.controller.utils.Reporte;
 import jakarta.validation.constraints.NotNull;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
 @Service
